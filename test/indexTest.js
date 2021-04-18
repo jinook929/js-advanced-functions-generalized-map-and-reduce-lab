@@ -65,7 +65,7 @@ describe('my own reduce-like methods', function() {
   describe("reduce returns false when no true value is present", function() {
     it("reduces correctly", function(){
       sourceArray = [ false, null, null, null]
-      expect(reduce(sourceArray, function(a, memo){return !!a && memo})).to.equal(false)
+      expect(reduce(sourceArray, function(a, memo){return !!a || memo})).to.equal(false)
     })
   })
 })
